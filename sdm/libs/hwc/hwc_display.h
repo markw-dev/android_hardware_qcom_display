@@ -151,6 +151,7 @@ class HWCDisplay : public DisplayEventHandler {
   void CacheLayerStackInfo(hwc_display_contents_1_t *content_list);
   bool IsLayerUpdating(hwc_display_contents_1_t *content_list, int layer_index);
   bool SingleLayerUpdating(uint32_t app_layer_count);
+  bool IsNonIntegralSourceCrop(const hwc_frect_t &source);
   uint32_t SanitizeRefreshRate(uint32_t req_refresh_rate);
 
   enum {
